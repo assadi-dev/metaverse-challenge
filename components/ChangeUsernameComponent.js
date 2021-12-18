@@ -13,9 +13,9 @@ function ChangeUsernameComponent() {
   };
   return (
     <div className="text-sm absolute top-5 right-5">
-      <button classname="hover:text-pink-700" onClick={setUsername}>
-        Change your Username
-      </button>
+      <button className="hover:text-pink-700" onClick={setUsername}>
+        Change your Username{" "}
+      </button>{" "}
     </div>
   );
 }
