@@ -161,6 +161,40 @@
             -webkit-animation: background-form 8s linear infinite;
         }
         
+        .send-button {
+            transition: all 0.35s ease;
+            background: linear-gradient(to right, rgb(99, 102, 241), rgb(236, 72, 153));
+            padding: 0.8rem;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            background-size: 200%;
+            animation: btn-bg-animation 1s linear infinite alternate;
+            -webkit-animation: btn-bg-animation 1s linear infinite alternate;
+            color: #111;
+        }
+        
+        .send-button:active {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+        
+        @keyframes btn-bg-animation {
+            0% {
+                background-position: left;
+                box-shadow: 0px 0px 0px 0px rgba(200, 55, 141, 0.3);
+            }
+            100% {
+                background-position: right;
+                box-shadow: 0px 0px 5px 3px rgb(99, 102, 241);
+            }
+        }
+        
         @keyframes background-form {
             0% {
                 opacity: 1;
@@ -177,6 +211,44 @@
                 -moz-transform: scale(1.2) translateY(-90px) rotate(360deg);
                 -ms-transform: scale(1.2) translateY(-90px) rotate(360deg);
                 -o-transform: scale(1.2) translateY(-90px) rotate(360deg);
+            }
+        }
+        
+        .message-user {
+            transition: all 0.35s ease;
+            background: linear-gradient(to right, rgb(249, 168, 212), rgb(190, 24, 93));
+            cursor: default;
+            background-size: 200%;
+            animation: message-animation 1s linear infinite alternate;
+            -webkit-animation: message-animation 1s linear infinite alternate;
+        }
+        
+        .message-user:hover {
+            font-weight: 700;
+            box-shadow: 0px 0px 8px 1px rgba(200, 55, 141, 0.8);
+        }
+        
+        .messages {
+            transition: all 0.35s ease;
+            background: linear-gradient(to right, rgb(96, 165, 250), rgb(29, 78, 216));
+            cursor: default;
+            color: white;
+            background-size: 200%;
+            animation: message-animation 1s linear infinite alternate;
+            -webkit-animation: message-animation 1s linear infinite alternate;
+        }
+        
+        .messages:hover {
+            font-weight: 700;
+            box-shadow: 0px 0px 12px 1px rgba(29, 78, 216, 0.8);
+        }
+        
+        @keyframes message-animation {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
             }
         }
         

@@ -20,8 +20,8 @@ function Message({ message }) {
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
           isUserMessage
-            ? "rounded-br-none bg-pink-700"
-            : "rounded-bl-none bg-blue-400"
+            ? "rounded-br-none message-user"
+            : "rounded-bl-none messages"
         } `}
       >
         <p>{message.get("message")}</p>
