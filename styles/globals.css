@@ -11,6 +11,7 @@
             -o-transition: all 0.35s ease;
             -webkit-animation: animate-shadow 2s ease-in infinite;
             border: solid 2px solid rgb(37, 99, 235, 0.5);
+            text-transform: uppercase;
         }
         
         .login-btn:hover {
@@ -46,47 +47,137 @@
         }
         
         .title-login {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 0;
-            font-weight: 800;
+            font-weight: 900;
             text-transform: uppercase;
-        }
-        
-        .title-login:first-of-type {
+            font-style: italic;
+            color: rgba(200, 55, 141, 0);
+            font-size: 2em;
+            padding: 1em 0;
+            background-image: linear-gradient(to left, rgb(99, 102, 241), rgb(236, 72, 153));
+            background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 0.5px rgba(200, 55, 141, 1);
-        }
-        
-        .title-login:last-of-type {
-            color: rgba(55, 115, 245, 0.979);
-            -webkit-text-stroke: 0.5px rgb(155, 11, 97);
-            animation: title-animate 4s ease-in-out infinite;
-            -webkit-animation: title-animate 4s ease-in-out infinite;
+            background-size: 200%;
+            animation: title-animate 1s infinite alternate;
+            -webkit-animation: title-animate 1s infinite alternate;
         }
         
         @keyframes title-animate {
             0% {
-                clip-path: circle(0% at 50% 52%);
-            }
-            25% {
-                clip-path: circle(35% at 50% 50%);
-            }
-            50% {
-                clip-path: circle(43.2% at 50% 50%);
-            }
-            50% {
-                clip-path: circle(43.2% at 50% 50%);
-            }
-            75% {
-                clip-path: circle(35% at 50% 50%);
+                background-position: left;
             }
             100% {
-                clip-path: circle(0% at 50% 50%);
+                background-position: right;
             }
         }
         
-        @media screen and (max-width:550px) {
-            .title-login {}
+        .container-header {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100;
         }
+        
+        .form {
+            height: 20px;
+            width: 20px;
+            border: 2px solid rgba(255, 255, 255, 1);
+            border-radius: 100%;
+            position: absolute;
+            z-index: -1;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            background: radial-gradient(rgb(99, 102, 241), rgb(236, 72, 153));
+        }
+        
+        .form:nth-of-type(1) {
+            top: 10%;
+            left: 5%;
+            animation: background-form 5s linear infinite;
+            -webkit-animation: background-form 5s linear infinite;
+        }
+        
+        .form:nth-of-type(2) {
+            top: 20%;
+            left: 50%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 8s linear infinite;
+        }
+        
+        .form:nth-of-type(3) {
+            top: 50%;
+            left: 10%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 8s linear infinite;
+        }
+        
+        .form:nth-of-type(4) {
+            top: 50%;
+            left: 40%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 11s linear infinite;
+        }
+        
+        .form:nth-of-type(5) {
+            top: 40%;
+            left: 60%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 7s linear infinite;
+        }
+        
+        .form:nth-of-type(6) {
+            top: 80%;
+            left: 30%;
+            animation: background-form 12s linear infinite;
+            -webkit-animation: background-form 12s linear infinite;
+        }
+        
+        .form:nth-of-type(7) {
+            top: 50%;
+            left: 80%;
+            animation: background-form 13s linear infinite;
+            -webkit-animation: background-form 13s linear infinite;
+        }
+        
+        .form:nth-of-type(8) {
+            top: 30%;
+            left: 90%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 8s linear infinite;
+        }
+        
+        .form:nth-of-type(9) {
+            top: 80%;
+            left: 90%;
+            animation: background-form 13s linear infinite;
+            -webkit-animation: background-form 13s linear infinite;
+        }
+        
+        .form:nth-of-type(10) {
+            top: 10%;
+            left: 30%;
+            animation: background-form 8s linear infinite;
+            -webkit-animation: background-form 8s linear infinite;
+        }
+        
+        @keyframes background-form {
+            0% {
+                opacity: 1;
+                transform: scale(0) translateY(0) rotate(0);
+                -webkit-transform: scale(0) translateY(0) rotate(0);
+                -moz-transform: scale(0) translateY(0) rotate(0);
+                -ms-transform: scale(0) translateY(0) rotate(0);
+                -o-transform: scale(0) translateY(0) rotate(0);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.2) translateY(-90px) rotate(360deg);
+                -webkit-transform: scale(1.2) translateY(-90px) rotate(360deg);
+                -moz-transform: scale(1.2) translateY(-90px) rotate(360deg);
+                -ms-transform: scale(1.2) translateY(-90px) rotate(360deg);
+                -o-transform: scale(1.2) translateY(-90px) rotate(360deg);
+            }
+        }
+        
+        @media screen and (max-width:550px) {}
