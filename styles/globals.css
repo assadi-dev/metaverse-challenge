@@ -1,41 +1,92 @@
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    .login-btn {
-        box-shadow: 0px 0px 8px 5px rgba(200, 55, 141, 0.8);
-        animation: animate-shadow 2s linear infinite;
-        transition: all 0.35s ease;
-        -webkit-transition: all 0.35s ease;
-        -moz-transition: all 0.35s ease;
-        -ms-transition: all 0.35s ease;
-        -o-transition: all 0.35s ease;
-        -webkit-animation: animate-shadow 2s ease-in infinite;
-        border: solid 2px solid rgb(37, 99, 235, 0.5);
-    }
-    
-    .login-btn:hover {
-        background: rgba(96, 165, 250, 1);
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-    }
-    
-    .login-btn:active {
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-    }
-    
-    .profil-image {
-        border: 2px solid rgba(200, 55, 141, 0.8) !important;
-    }
-    
-    @keyframes animate-shadow {
-        50% {
-            box-shadow: 0px 0px 12px 5px rgb(37, 99, 235, 0.5);
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        .login-btn {
+            box-shadow: 0px 0px 8px 5px rgba(200, 55, 141, 0.8);
+            animation: animate-shadow 2s linear infinite;
+            transition: all 0.35s ease;
+            -webkit-transition: all 0.35s ease;
+            -moz-transition: all 0.35s ease;
+            -ms-transition: all 0.35s ease;
+            -o-transition: all 0.35s ease;
+            -webkit-animation: animate-shadow 2s ease-in infinite;
+            border: solid 2px solid rgb(37, 99, 235, 0.5);
         }
-    }
+        
+        .login-btn:hover {
+            background: rgba(96, 165, 250, 1);
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+        
+        .login-btn:active {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+        
+        .profil-image {
+            border: 2px solid rgba(200, 55, 141, 0.8) !important;
+        }
+        
+        @keyframes animate-shadow {
+            50% {
+                box-shadow: 0px 0px 12px 5px rgba(37, 99, 235, 0.5);
+            }
+        }
+        
+        .title-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        .title-login {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .title-login:first-of-type {
+            color: transparent;
+            -webkit-text-stroke: 0.5px rgba(200, 55, 141, 1);
+        }
+        
+        .title-login:last-of-type {
+            color: rgba(55, 115, 245, 0.979);
+            -webkit-text-stroke: 0.5px rgb(155, 11, 97);
+            animation: title-animate 4s ease-in-out infinite;
+            -webkit-animation: title-animate 4s ease-in-out infinite;
+        }
+        
+        @keyframes title-animate {
+            0% {
+                clip-path: circle(0% at 50% 52%);
+            }
+            25% {
+                clip-path: circle(35% at 50% 50%);
+            }
+            50% {
+                clip-path: circle(43.2% at 50% 50%);
+            }
+            50% {
+                clip-path: circle(43.2% at 50% 50%);
+            }
+            75% {
+                clip-path: circle(35% at 50% 50%);
+            }
+            100% {
+                clip-path: circle(0% at 50% 50%);
+            }
+        }
+        
+        @media screen and (max-width:550px) {
+            .title-login {}
+        }
