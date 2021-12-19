@@ -26,7 +26,10 @@ function ModalUsername({ isOpen, onCloseModal }) {
         >
           <FontAwesomeIcon className="mr-1" icon={["fas", "times"]} />
         </button>
-        <label className="text-pink-500 py-8" htmlFor="username">
+        <label
+          className="text-pink-500 py-8 sm:text-[22px] font-semibold"
+          htmlFor="username"
+        >
           <FontAwesomeIcon className="mr-1" icon={["fas", "user"]} /> Change
           your username{" "}
         </label>
