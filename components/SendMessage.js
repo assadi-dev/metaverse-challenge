@@ -45,7 +45,7 @@ const SendMessage = ({ endOfMessagesRef }) => {
     <>
       {" "}
       {showEmojis && (
-        <div className="absolute w-auto top-20  sm:top-auto sm:bottom-2 left-5 z-50 ">
+        <div className="fixed w-auto top-20  sm:top-auto sm:bottom-2 left-5 z-50 ">
           <Picker onSelect={addEmoji} />
         </div>
       )}
