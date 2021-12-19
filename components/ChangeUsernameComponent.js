@@ -11,9 +11,9 @@ function ChangeUsernameComponent() {
   };
 
   return (
-    <div className="text-sm absolute top-5 right-8 ">
+    <div className="text-sm absolute top-5 right-1 ">
       <button
-        className="py-2 px-5 rounded-full text-slate-800 font-[600] uppercase change-username-btn"
+        className="py-2 px-5 rounded-full text-slate-800 text-[12px] md:text-[16px] font-[600] uppercase change-username-btn"
         onClick={() => setOpenModal(true)}
       >
         Change your Username{" "}
