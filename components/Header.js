@@ -9,7 +9,7 @@ import FormAnimation from "./FormAnimation";
 function Header() {
   const { user } = useMoralis();
   return (
-    <div className="sticky top-0 p-5 z-50 bg-black/90  shadow-sm text-pink-500 border-2 border-pink-700 container-header rounded-lg  ">
+    <div className="sticky top-4 p-5 z-50 bg-black/90  shadow-sm text-pink-500 border-2 border-pink-700 container-header rounded-lg  ">
       <FormAnimation />
       <div className="grid grid-cols-5 lg:grid-cols-6 items-end lg:items-center">
         <div className="relative h-24 w-24 mx-auto  hidden  lg:inline-grid">
