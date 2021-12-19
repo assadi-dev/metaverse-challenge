@@ -16,13 +16,21 @@ export default function Home() {
         <title> Metaverse Challenge </title>{" "}
         <link rel="icon" href="/favicon.ico" />
       </Head>{" "}
-      <main className="">
+      <main className=" relative">
         <div className="max-w-screen-2xl p-5 mx-auto">
           {/* header*/}
           <Header />
           {/* Message*/}
           <Messages />
-          <button onClick={logout}> Logout </button>
+          <div className="w-full flex justify-end pr-10">
+            <button
+              className="uppercase  text-white py-3 px-8 rounded-full logout-btn"
+              onClick={logout}
+            >
+              {" "}
+              Logout{" "}
+            </button>
+          </div>
         </div>
       </main>
     </div>

@@ -21,30 +21,29 @@ function Messages() {
     [],
     { live: true }
   );
-  console.log(data);
+
   return (
     <div className="pb-56">
       <div className="my-5">
         <ByMoralis
           variant="dark"
           style={{ marginLeft: "auto", marginRight: "auto" }}
-        />
-      </div>
+        />{" "}
+      </div>{" "}
       <div className="p-4 space-y-10">
+        {" "}
         {/*Each Message */}
-
         {data.map((message) => (
           <Message key={message.id} message={message} />
-        ))}
-      </div>
+        ))}{" "}
+      </div>{" "}
       <div className="flex justify-center">
-        {/*Send Message*/}
-        <SendMessage endOfMessagesRef={endOfMessagesRef} />
+        {" "}
+        {/*Send Message*/} <SendMessage endOfMessagesRef={endOfMessagesRef} />{" "}
       </div>
-
       <div ref={endOfMessagesRef} className="text-center text-gray-400 mt-5">
-        <p>You're up to date {user.getUsername()}!</p>
-      </div>
+        <p> You 're up to date {user.getUsername()} 🤩!</p>{" "}
+      </div>{" "}
     </div>
   );
 }

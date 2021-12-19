@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMoralis } from "react-moralis";
+import ModalUsername from "./ModalUsername";
 
 function ChangeUsernameComponent() {
   const { setUserData, isUserUpdating, userError, user } = useMoralis();
-  const setUsername = () => {
-    const username = prompt(
-      `Enter your username currently : ${user.getUsername()}`
-    );
+  const [openModal, setOpenModal] = useState(false);
 
-    if (!username) return;
-    setUserData({ username });
+  const closeModal = (arg) => {
+    setOpenModal(arg);
   };
+
   return (
-    <div className="text-sm absolute top-5 right-5">
-      <button className="hover:text-pink-700" onClick={setUsername}>
+    <div className="text-sm absolute top-5 right-8 ">
+      <button
+        className="py-2 px-5 rounded-full text-slate-800 font-[600] uppercase change-username-btn"
+        onClick={() => setOpenModal(true)}
+      >
         Change your Username{" "}
-      </button>{" "}
+      </button>
+      {openModal && (
+        <ModalUsername isOpen={openModal} onCloseModal={closeModal} />
+      )}
     </div>
   );
 }

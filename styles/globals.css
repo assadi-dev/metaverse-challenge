@@ -15,7 +15,6 @@
         }
         
         .login-btn:hover {
-            background: rgba(96, 165, 250, 1);
             transform: scale(1.1);
             -webkit-transform: scale(1.1);
             -moz-transform: scale(1.1);
@@ -29,6 +28,22 @@
             -moz-transform: scale(1.2);
             -ms-transform: scale(1.2);
             -o-transform: scale(1.2);
+        }
+        
+        .animate-login-btn {
+            animation: connect-animate 0.5s ease infinite alternate;
+            -webkit-animation: connect-animate 0.5s ease infinite alternate;
+            background: linear-gradient(to right, rgb(96, 165, 250), rgb(29, 78, 216));
+            background-size: 200%;
+        }
+        
+        @keyframes connect-animate {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
         }
         
         .profil-image {
@@ -64,14 +79,23 @@
         @keyframes title-animate {
             0% {
                 background-position: left;
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
             }
             100% {
                 background-position: right;
+                transform: scale(0.95);
+                -webkit-transform: scale(0.95);
+                -moz-transform: scale(0.95);
+                -ms-transform: scale(0.95);
+                -o-transform: scale(0.95);
             }
         }
         
         .container-header {
-            position: relative;
             overflow: hidden;
             width: 100%;
             height: 100;
@@ -214,6 +238,7 @@
             }
         }
         
+        .change-username-btn,
         .message-user {
             transition: all 0.35s ease;
             background: linear-gradient(to right, rgb(249, 168, 212), rgb(190, 24, 93));
@@ -228,6 +253,7 @@
             box-shadow: 0px 0px 8px 1px rgba(200, 55, 141, 0.8);
         }
         
+        .logout-btn,
         .messages {
             transition: all 0.35s ease;
             background: linear-gradient(to right, rgb(96, 165, 250), rgb(29, 78, 216));
@@ -251,5 +277,7 @@
                 background-position: right;
             }
         }
+        
+        .sidebar-item {}
         
         @media screen and (max-width:550px) {}

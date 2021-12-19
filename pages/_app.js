@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { MoralisProvider } from "react-moralis";
+import "emoji-mart/css/emoji-mart.css";
 
 function MyApp({ Component, pageProps }) {
   return (
