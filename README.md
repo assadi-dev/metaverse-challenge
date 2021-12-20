@@ -8,3 +8,4 @@ This is a decentralized chat app build with next js and moralise to connect with
 
  <img src="./public/assets/preview/Capture.PNG">
  <img src="./public/assets/preview/Capture12.PNG">
+  <img src="./public/assets/preview/Capture13.PNG">
